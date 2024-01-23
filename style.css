@@ -1,17 +1,17 @@
 @font-face{
-    src: url(nexa-rust.slab-black-shadow-01.otf);
+    src: url(fonts/nexa-rust.slab-black-shadow-01.otf);
     font-family: Nexa-slab;
 }
 @font-face{
-    src: url("montserrat.regular.ttf");
+    src: url("fonts/montserrat.regular.ttf");
     font-family: montserrat;
 }
 @font-face {
-    src: url(NexaRustSans-Black.otf);
+    src: url(fonts/NexaRustSans-Black.otf);
     font-family: Nexa;
 }
 @font-face {
-    src: url("Uni Sans Heavy.otf");
+    src: url("fonts/Uni Sans Heavy.otf");
     font-family: Uni;
 }
 
