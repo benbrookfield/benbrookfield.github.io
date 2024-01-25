@@ -2,11 +2,12 @@ const projectsButton = document.getElementById("projectsButton");
 const workButton = document.getElementById("workButton");
 const educationButton = document.getElementById("educationButton");
 
-
+// This function loads all info for the projects section of my website
 projectsButton.onclick = function(){
+    // Clear the bottom section by removing all items that are in the "bottom" class
     document.querySelectorAll(".bottom").forEach(element => element.remove());
 
-
+    // Create all entities for this section and add them to "bottom" class
     const heading1 = document.createElement("h2");
     heading1.classList.add("bottom");
     const link1 = document.createElement("a");
@@ -25,7 +26,7 @@ projectsButton.onclick = function(){
     const para3 = document.createElement("p");
     para3.classList.add("bottom");
 
-
+    // Add text and any other neccesarry info e.g. href links to all entities, then append them.
     heading1.textContent = "Fitassist - A Level Coursework"
     document.body.appendChild(heading1);
 
@@ -65,8 +66,10 @@ projectsButton.onclick = function(){
 
 /*This function loads the work experience section after the work experience button is pressed.*/
 workButton.onclick = function(){
+    // Clear bottom section
     document.querySelectorAll(".bottom").forEach(element => element.remove());
 
+    // create all entities, add neccesary data, and append to the web page.
     const heading1 = document.createElement("h2");
     heading1.classList.add("bottom");
     heading1.textContent = 'The Mile Castle, Newcastle';
@@ -145,7 +148,9 @@ workButton.onclick = function(){
     document.body.appendChild(para5);
 }
 
+// This function adds all info for the education section
 educationButton.onclick = function() {
+    // Clear bottom section
     document.querySelectorAll(".bottom").forEach(element => element.remove());
 
     const heading1 = document.createElement("h2");
