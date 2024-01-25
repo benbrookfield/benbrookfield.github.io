@@ -30,7 +30,7 @@ projectsButton.onclick = function(){
     document.body.appendChild(heading1);
 
     link1.textContent = "Github link"
-    link1.href = "https://github.com/benbrookfield/portfolio-website"
+    link1.href = "https://github.com/benbrookfield/benbrookfield.github.io"
     document.body.appendChild(link1);
 
     para1.innerText = 'Fitassist is a health and fitness app which I made for my A Level Computer Science coursework.' +
@@ -205,7 +205,7 @@ educationButton.onclick = function() {
 
     const para4 = document.createElement("p");
     para4.classList.add("bottom");
-    para4.textContent = 'I attended high school at Parrs Wood High School in Manchester nad achieved the following GCSE' +
+    para4.textContent = 'I attended high school at Parrs Wood High School in Manchester and achieved the following GCSE' +
         ' grades:';
     document.body.appendChild(para4);
 
