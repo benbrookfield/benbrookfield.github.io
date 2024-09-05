@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to use PlaygroundDB</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/how-to-use.css')}}">
+</head>
+<body>
+    <h1>How to use PlaygrounDB</h1>
+
+    <div class="SQLite">
+        <h2>SQLite</h2>
+        <p>PlaygroundDB uses a sample SQLite database called Chinook. SQLite is a version of SQL which allows developers
+        to embed their database within an application, rather than having a separate server to store the database.</p>
+        <p>For SQL beginners, the only difference between the different versions of SQL that should be kept in mind is
+        case sensitivity. While some versions of SQL, such as PostgreSQL are case-sensitive by default, other versions,
+        such as SQLite are not.</p>
+        <p>As you move onto more advanced queries, you will encounter more differences between SQLite and other versions
+        of SQL. For a more comprehensive understanding, please read the following articles:</p>
+        <a href="https://runcloud.io/blog/sqlite-vs-mysql-vs-postgresql/">Runcloud: SQLite vs MySQL vs PostgreSQL</a>
+        <br>
+        <a href="https://www.databasestar.com/sql-data-types/">Database Star: SQL Data Types - Oracle, SQl Server, MySQL,
+         PostgreSQL</a>
+    </div>
+
+    <div class="Database">
+        <h2>The database</h2>
+        <p>As previously mentioned, PlaygroundDB uses a sample SQLite database called "Chinook". Chinook is widely used
+        to help beginners learn and practice SQL. Chinook stores data about a digital music shop, it is made using
+        over 15,000 rows of real-world data gathered from the itunes store and is structured like a real-world database.</p>
+
+        <p>Chinook has 11 tables as follows:</p>
+        <ul>
+            <li><code>employees</code> table stores employee data such as id, last name, first name, etc. It also has a field named
+                <code>ReportsTo</code> to specify who reports to whom.</li>
+            <li><code>customers</code> table stores customer data</li>
+            <li><code>invoices</code> and <code>invoice_items</code> store invoice data. The <code>invoices</code> table
+                stores invoice header data and the <code>invoice_items</code> table stores the invoice line items data.</li>
+            <li><code>artists</code> table stores artist data. It is a simple table that contains the id and name.</li>
+            <li><code>albums</code> table stores data about a list of tracks. Each album belongs to one artist. However, one artist
+                may have multiple albums.</li>
+            <li><code>media_types</code> table stores media types such as MPEG audio and AAC audio files.</li>
+            <li><code>genres</code> table stores music types such as rock, jazz, metal, etc.</li>
+            <li><code>tracks</code> table stores the data of songs. Each track belongs to one album.</li>
+            <li><code>playlists</code> & <code>playlist_track</code> tables: <code>playlists</code> table stores data about playlists.
+                Each playlist contains a list of tracks. Each track may belong to multiple playlists. The relationship
+                between the <code>playlists</code> and tracks tables is many-to-many. The playlist_track table is used
+                to reflect this relationship.</li>
+        </ul>
+        <h2>Entity-Relationship diagram:</h2>
+        <img src="{{url_for('static', filename='pictures/chinook.png')}}" width=70%>
+    </div>
+
+    <div class="Questions">
+        <h2>Practice Questions</h2>
+        <p>These questions progress in difficulty and will help you learn SQL functions.</p>
+        <ol>
+            <li>Retrieve all rows from the <code>tracks</code> table</li>
+            <li>Find all customers from brazil</li>
+            <li>Get a list of all albums, ordered alphabetically by <code>title</code></li>
+            <li>How many tracks are in the <code>tracks</code> table?</li>
+            <li>Retrieve a list of all tracks and the albums they belong to</li>
+            <li>Find the number of albums by each artist</li>
+            <li>List all customers who have placed at least on order</li>
+            <li>Find the names of all customers who have purchased a rock song</li>
+            <li>Retrieve the total sales from each customer by finding the total of their invoices</li>
+            <li>List the artists with more than 5 albums in the database</li>
+        </ol>
+    </div>
+
+</body>
+</html>

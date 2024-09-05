@@ -1,0 +1,28 @@
+@font-face{
+    src: url(../fonts/nexa-rust.slab-black-shadow-01.otf);
+    font-family: Nexa-slab;
+}
+@font-face {
+    src: url("../fonts/Uni Sans Heavy.otf");
+    font-family: Uni;
+}
+
+body{
+    font-family: "Trebuchet MS";
+    background-color: rgb(25, 25, 25);
+    color: whitesmoke;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1{
+    font-family: Nexa-slab, Arial;
+    text-shadow: 0px 0px 5px whitesmoke;
+    font-size: 50px;
+}
+
+code{
+    background-color: rgb(55, 55, 55);
+    border-radius: 5px;
+}
