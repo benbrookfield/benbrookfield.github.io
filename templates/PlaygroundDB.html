@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlaygroundDB</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/PlaygroundDB.css')}}">
+</head>
+<body>
+    <h1>PlaygrounDB</h1>
+
+    <a href="playgroundDB/how-to-use" target="_blank">
+        <button style="width: 300px">Learn About Our Database</button>
+    </a>
+
+    <div>
+        <form method="POST">
+            <textarea name="query_input" id="query_input" placeholder="Enter SQLite queries here...">{{ query_input }}</textarea><br>
+            <button id="search_button" type="submit" rows="1" cols="1">SEARCH</button><br>
+            <pre id="query_output"></pre>
+        </form>
+    </div>
+
+    <!-- Output results -->
+    {% if results %} <!-- Check results have been provided -->
+        <h2>Results:</h2>
+        <table border="=1">
+            <thead>
+                <!-- Loop through column names and add to top row in table -->
+                <tr>
+                    {% for column_name in column_names %}
+                    <th>{{ column_name }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through results and add them row by row -->
+                {% for row in results %}
+                    <tr>
+                        {% for column in row %}
+                        <td>{{ column }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <!-- If an error was passed through, tell the user and then print an error message -->
+    {% elif error %}
+        <h2>There was an error with this query:</h2>
+        <pre>{{ error }}</pre>
+    {% endif %}
+
+</body>
+</html>

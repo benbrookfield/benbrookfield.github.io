@@ -1,0 +1,66 @@
+@font-face{
+    src: url(../fonts/nexa-rust.slab-black-shadow-01.otf);
+    font-family: Nexa-slab;
+}
+@font-face {
+    src: url("../fonts/Uni Sans Heavy.otf");
+    font-family: Uni;
+}
+
+body{
+    text-align: center;
+    background-color: rgb(25, 25, 25);
+    color: whitesmoke;
+}
+
+h1{
+    font-family: Nexa-slab, Arial;
+    font-size: 50px;
+    text-shadow: 0px 0px 5px whitesmoke;
+}
+
+h2{
+    font-family: Arial;
+}
+
+pre{
+    font-size: 20px;
+}
+
+textarea{
+    width: 50%;
+    height: 150px;
+    font-size: 20px;
+    resize: none;
+    border-width: 0px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px whitesmoke;
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "Trebuchet MS";
+    color: whitesmoke;
+    padding: 8px;
+    width: 225px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
+    margin: 15px 10px;
+    transition-duration: 0.3s;
+}
+
+button:hover{
+    background-color: whitesmoke;
+    color: darkslategrey;
+    box-shadow: 0px 0px 20px whitesmoke;
+    width: 240px;
+}
+
+table{
+    border-collapse: collapse;
+    font-family: Verdana;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
